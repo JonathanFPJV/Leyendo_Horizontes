@@ -18,6 +18,11 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
+            'dni' => '12345678',
+            'direccion' => 'Calle 01',
         ]);
+
+        // Llamar al seeder de libros
+        $this->call(LibroSeeder::class);
     }
 }
