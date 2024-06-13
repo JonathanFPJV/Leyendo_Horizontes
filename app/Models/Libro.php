@@ -16,6 +16,7 @@ class Libro extends Model
         'editorial',
         'stock',
         'disponibilidad',
+        'imagen',
     ];
 
     public function prestamos()
