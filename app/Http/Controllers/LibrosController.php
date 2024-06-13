@@ -30,14 +30,4 @@ class LibrosController extends Controller
         return view('libros.search', compact('libros', 'query'));
     }
 
-
-    public function show(Libro $libro)
-    {
-        return view('libros.show', compact('libro'));
-    }
-
-    public function solicitud(Libro $libro)
-    {
-        return view('libros.show', compact('libro'));
-    }
 }
