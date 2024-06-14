@@ -4,8 +4,11 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LibrosController;
 
+
 Route::get('/horizontes', [LibrosController::class, 'index'])->name('libros.index');
 Route::get('/libros/search', [LibrosController::class, 'search'])->name('libros.search');
+Route::get('/libros/{libro}', [LibrosController::class, 'show'])->name('libros.show');
+
 
 Route::get('/', function () {
     return view('welcome');

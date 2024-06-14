@@ -11,6 +11,13 @@
             Autor: {{ $author }}
         </p>
     </div>
+    <div>
+        <a href="{{ route('libros.show', $libroId) }}">
+            <x-primary-button class="ms-4">
+                {{ __('Ver libro') }}
+            </x-primary-button>
+        </a>
+    </div>
 </div>
 
 

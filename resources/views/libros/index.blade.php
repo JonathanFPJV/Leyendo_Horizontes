@@ -16,7 +16,7 @@
             <!-- Books Grid -->
             <div class="grid grid-cols-4 gap-4 mt-8">
                 @foreach($libros as $libro)
-                    <x-book :image="$libro->imagen" :title="$libro->nombre" :author="$libro->autor" :libro="$libro" />
+                    <x-book :image="$libro->imagen" :title="$libro->nombre" :author="$libro->autor" :libro-id="$libro->id" />
                 @endforeach
             </div>
 

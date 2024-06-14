@@ -30,4 +30,11 @@ class LibrosController extends Controller
         return view('libros.search', compact('libros', 'query'));
     }
 
+    public function show($id)
+    {
+        $libro = Libro::findOrFail($id);
+        return view('libros.show', compact('libro'));
+    }
+
+
 }
