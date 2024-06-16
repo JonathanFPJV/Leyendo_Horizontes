@@ -14,7 +14,7 @@ class LibrosController extends Controller
      */
     public function index()
     {
-        $libros = Libro::paginate(12);;
+        $libros = Libro::where('disponibilidad',1)->paginate(12);;
 
         return view('libros.index', compact('libros'));
     }
