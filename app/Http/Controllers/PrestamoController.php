@@ -6,6 +6,8 @@ use App\Models\Prestamo;
 use App\Models\Libro;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon;
+
 
 class PrestamoController extends Controller
 {
@@ -15,6 +17,15 @@ class PrestamoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    public function index()
+    {
+        $prestamos = Prestamo::with('libro')
+            ->where('user_id', Auth::id())
+            ->get();
+
+        return view('prestamos.index', compact('prestamos'));
+    }
+
     public function store(Request $request)
     {
         $request->validate([
